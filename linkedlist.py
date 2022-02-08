@@ -27,7 +27,7 @@ class Sll(Node):
             if valtofind == value.data:
                 self.linkedList.pop(index)
                 self.linkedList[index-1].next = self.linkedList[index]
-                # self.printAllNode()
+                print("Node is Deleted")
 
     def addNewNode(self):
         c = Node()
@@ -42,7 +42,7 @@ class Sll(Node):
                         self.linkedList[index].next = c
                         c.next = self.linkedList[index+1]
                         self.linkedList.insert(index+1, c)
-                        # self.printAllNode()
+                        print("node is inserted")
 
         except IndexError:
             c.addData()
@@ -65,7 +65,7 @@ class Sll(Node):
 
 sll = Sll()
 while True:
-    print("###################################### SINGLY LINKED LIST #####################################################")
+    print("###################################### SINGLY LINKED LIST ######################################")
     print("1. add node to linked list")
     print("2. add new node in a middle of a linked list")
     print("3. delete a node")
